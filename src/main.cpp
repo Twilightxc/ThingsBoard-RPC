@@ -1,4 +1,4 @@
-// ***************    RELAY   ******************
+// ************ CONTROL RELAY   ****************
 // ********** CONNECTION PART ******************
 // library
 #include <Arduino.h>
@@ -127,7 +127,7 @@ void connectToMQTTBroker() {
     if (client.connect(ID, token, password)) {
       Serial.println("✅Connected to ThingsBoard Success");
       client.subscribe(mqtt_sub_topic);  // Subscribe after successful connection
-  DEVICE_STATUS = "ONLINE";
+      DEVICE_STATUS = "ONLINE";
     } else {
       Serial.println("❌ Connection to ThingsBoard FAILED, retrying in 5 seconds");
       delay(5000);
