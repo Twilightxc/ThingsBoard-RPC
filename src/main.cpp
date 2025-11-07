@@ -10,8 +10,8 @@
 char WIFI_SSID[] = "Wokwi-GUEST";
 char WIFI_PASSWORD[] = "";
 
-const char* ID = "";
-const char* token = "lWCVMelxZnzHhgsl6Skj"; // <-- Device Token From LAB Hello-ThingsBoard
+const char* ID = ""; // <-- Random Device ID
+const char* token = ""; // <-- Device Token From LAB Hello-ThingsBoard
 const char* password = "";
 const char* thingsboard_server = "104.196.24.70";
 const int port = 1883;

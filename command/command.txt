@@ -1,0 +1,32 @@
+command
+*********************************************************
+mock data
+
+Invoke-WebRequest -Uri "http://demo.thingsboard.io/api/v1/<<TOKEN>>/telemetry" -Method POST -ContentType "application/json" -Body '{"temperature":50.4}'
+
+*********************************************************
+script node
+
+var rpcMsg = {
+method: "setGpioStatus",
+params: {
+pin: 35,
+enabled: true
+}
+};
+return {
+msg: rpcMsg,
+metadata: metadata,
+msgType: msgType
+};
+
+*********************************************************
+rpc widget
+
+{
+"method": "setGpioStatus",
+"params": {
+"pin": replace_pin,
+"enabled": replace_status(true/false)
+}
+}
